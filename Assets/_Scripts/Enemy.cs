@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour, IHasHealth {
 
     public void TakeDamage(int dmg) {
         currentHealth -= dmg;
+        Knockback();
         if(currentHealth == 0) {
             Die();
         } else if(currentHealth < 0) {
@@ -35,8 +36,7 @@ public class Enemy : MonoBehaviour, IHasHealth {
     }
 
     public void Die() {
-        //Call Add Points
-        ScoreManager.AddPoints(1);
+        
         //Instantiate Death paraticles
         //Change to corpse Graphic and disable all other scripts
         DisableScripts();
@@ -47,5 +47,9 @@ public class Enemy : MonoBehaviour, IHasHealth {
         foreach (MonoBehaviour script in scripts) {
             script.enabled = false;
         }
+    }
+
+    public void Knockback() {
+        //TODO Knockback
     }
 }

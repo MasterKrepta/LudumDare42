@@ -7,4 +7,6 @@ public interface IHasHealth {
     void TakeDamage(int dmg);
 
     void Die();
+
+    void Knockback();
 }

@@ -5,7 +5,7 @@ using TMPro;
 
 public class GrinderTimer : MonoBehaviour {
     Grinder grinder;
-
+    
     [SerializeField] TMP_Text txtTimeRemaining;
 
     [SerializeField] float timeToDrop = 15;
@@ -38,9 +38,14 @@ public class GrinderTimer : MonoBehaviour {
 
         //txtTimeRemaining.text = "Time Remaining: " + string.Format("{0}:{1}", minutes, seconds);
         txtTimeRemaining.text = string.Format("{0}:{1}", minutes, seconds);
+
+        if(secondsRemaining < 10) {
+            txtTimeRemaining.GetComponent<Animator>().SetBool("Hurry", true);
+        }
     }
 
     void ResetClock() {
+        txtTimeRemaining.GetComponent<Animator>().SetBool("Hurry", false);
         secondsRemaining = timeToDrop;
         FormatTimer(secondsRemaining);
     }
