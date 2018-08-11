@@ -14,5 +14,10 @@ public class Bullet : MonoBehaviour {
         Destroy(gameObject, lifetime);
     }
 
-   
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Enemy")) {
+            other.GetComponent<IHasHealth>().TakeDamage(1);
+            Destroy(this.gameObject);
+        }
+    }
 }

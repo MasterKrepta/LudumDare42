@@ -4,7 +4,7 @@ using UnityEngine;
 
 public interface IHasHealth {
 
-    void TakeDamage();
+    void TakeDamage(int dmg);
 
     void Die();
 }

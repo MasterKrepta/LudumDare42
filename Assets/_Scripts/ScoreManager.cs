@@ -4,8 +4,8 @@ using UnityEngine;
 using TMPro;
 public class ScoreManager : MonoBehaviour {
 
-    float highScore;
-    float currentScore;
+    static float highScore;
+    static float currentScore;
 
 
 	// Use this for initialization
@@ -18,12 +18,13 @@ public class ScoreManager : MonoBehaviour {
 		
 	}
 
-    public void AddPoints(float pointsToGive) {
+    public static void AddPoints(float pointsToGive) {
         currentScore += pointsToGive;
         DisplayScore();
     }
 
-    void DisplayScore() {
+    static void  DisplayScore() {
         //TODO update "display" or wait till end of game?
+        Debug.Log("Current Score: " + currentScore);
     }
 }

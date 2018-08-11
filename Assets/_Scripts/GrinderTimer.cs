@@ -21,6 +21,7 @@ public class GrinderTimer : MonoBehaviour {
 	void Update () {
 		if(secondsRemaining <= 0) {
             //DROP;
+            txtTimeRemaining.text = "00:00";
             grinder.ActivateGrinder();
             //TODO: Place a small delay on the clock so it doenst auto roll over instantly. 
             ResetClock();
@@ -35,7 +36,8 @@ public class GrinderTimer : MonoBehaviour {
         string minutes = Mathf.Floor(secondsRemaining / 60).ToString("00");
         string seconds = (secondsRemaining % 60).ToString("00");
 
-        txtTimeRemaining.text = "Time Remaining: " + string.Format("{0}:{1}", minutes, seconds);
+        //txtTimeRemaining.text = "Time Remaining: " + string.Format("{0}:{1}", minutes, seconds);
+        txtTimeRemaining.text = string.Format("{0}:{1}", minutes, seconds);
     }
 
     void ResetClock() {
