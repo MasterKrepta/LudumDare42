@@ -36,7 +36,7 @@ public class Enemy : MonoBehaviour, IHasHealth {
     }
 
     public void Die() {
-        
+        Spawner.UpdateKills();
         //Instantiate Death paraticles
         //Change to corpse Graphic and disable all other scripts
         DisableScripts();
