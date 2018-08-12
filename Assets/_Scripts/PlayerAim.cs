@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerAim : MonoBehaviour {
 
     [SerializeField] Transform gun;
+    [SerializeField] Transform barrel;
     [SerializeField] Transform bullet;
     [SerializeField] float fireRate;
     float cooldown;
@@ -27,7 +28,8 @@ public class PlayerAim : MonoBehaviour {
         if (Input.GetMouseButton(0) && canFire) {
             canFire = false;
             anim.SetTrigger("Fired");
-            Instantiate(bullet, gun.position, gun.rotation);
+            //Instantiate(bullet, bullet.position, gun.rotation);
+            Instantiate(bullet, barrel.position, barrel.rotation);
         }
 
         if (!canFire && cooldown > 0) {

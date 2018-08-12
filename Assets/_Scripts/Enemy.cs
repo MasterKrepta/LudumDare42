@@ -20,6 +20,10 @@ public class Enemy : MonoBehaviour, IHasHealth {
 	void Update () {
         if (Vector2.Distance(transform.position, target.position) > 1) {
             transform.position = Vector2.MoveTowards(transform.position, target.position, moveSpeed * Time.deltaTime);
+
+            Vector3 dir = target.position - transform.position;
+            float angle = Mathf.Atan2(dir.y, dir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
         }
     }
 

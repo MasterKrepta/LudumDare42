@@ -57,7 +57,7 @@ public class Spawner : MonoBehaviour {
 
     private  int GetRandomEnemy() {
         int index;
-        Debug.Log(enemies.Count);
+        
         if(wave < enemies.Count) {
             index = UnityEngine.Random.Range(0, wave);
         }

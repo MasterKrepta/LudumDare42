@@ -18,7 +18,7 @@ public class GrinderTimer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
 		if(secondsRemaining <= 0) {
             //DROP;
             txtTimeRemaining.text = "00:00";
