@@ -48,6 +48,8 @@ public class Spawner : MonoBehaviour {
             Instantiate(enemies[randomEnemy], spawnPoints[randomSpawn].position, Quaternion.identity);
             enemiesAlive++;
         }
+
+        
     }
 
     private  int GetRandomSpawnPoint() {
@@ -82,4 +84,6 @@ public class Spawner : MonoBehaviour {
         yield return new WaitForSeconds(spawnDelay);
         Spawn(enemiesToSpawn + wave);
     }
+
+  
 }

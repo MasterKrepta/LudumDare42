@@ -317,6 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 719c23d060a1cf84089eb0338f9ccd9d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cursor: {fileID: 2800000, guid: 2da3a4ceb69a4964391684e715641a90, type: 3}
   gun: {fileID: 4910008420520520}
   barrel: {fileID: 4439515997068010}
   bullet: {fileID: 4972473593074246, guid: 43e08f9a15d98aa45a96ea1a17d4a6cc, type: 2}

@@ -6,6 +6,10 @@ public class Enemy : MonoBehaviour, IHasHealth {
 
     SpriteRenderer sr;
     Transform art;
+
+    public enum Animal {CHICKEN, PIG, COW, DEAD};
+    public Animal type;
+
     [SerializeField] GameObject bloodEffect;
     [SerializeField] float maxHealth = 2;
     [SerializeField]float currentHealth;
@@ -36,16 +40,18 @@ public class Enemy : MonoBehaviour, IHasHealth {
 
 
     public void TakeDamage(int dmg) {
+        Instantiate(bloodEffect, transform.position, Quaternion.identity);
         currentHealth -= dmg;
         Knockback();
         if(currentHealth == 0) {
+            type = Animal.DEAD;
             Spawner.UpdateKills();
             //Instantiate Death paraticles
             //Change to corpse Graphic and disable all other scripts
             DisableScripts();
             art.gameObject.SetActive(false);
             sr.enabled = true;
-            Instantiate(bloodEffect, transform.position, Quaternion.identity);
+            
         } else if(currentHealth < 0) {
             return;
         }

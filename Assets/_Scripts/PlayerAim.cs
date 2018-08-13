@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerAim : MonoBehaviour {
-
+    [SerializeField] Texture2D cursor;
     [SerializeField] Transform gun;
     [SerializeField] Transform barrel;
     [SerializeField] Transform bullet;
@@ -15,6 +15,7 @@ public class PlayerAim : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        Cursor.SetCursor(cursor, Vector2.zero, CursorMode.Auto);
         anim = Camera.main.GetComponent<Animator>();
         cooldown = fireRate;
 	}

@@ -253,6 +253,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e8f7bc0c4fbcd0044ae3db260ee76192, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  type: 2
   bloodEffect: {fileID: 1032960214863442, guid: 8989519c352a1344791da4bdfd3b20f4,
     type: 2}
   maxHealth: 2

@@ -43,6 +43,8 @@ public class PlayerHealth : MonoBehaviour, IHasHealth {
 
     public void TakeDamage(int dmg) {
         if (!Invincible) {
+            AudioSource grunt = GetComponent<AudioSource>();
+            grunt.Play();
             Invincible = true;
             StartCoroutine(FlashColor());
             

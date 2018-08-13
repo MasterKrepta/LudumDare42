@@ -11,6 +11,8 @@ public class Grinder : MonoBehaviour {
         anim = Camera.main.GetComponent<Animator>();
     }
     public void ActivateGrinder() {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
         grate.SetActive(false);
         anim.SetTrigger("Grinder");
         //TODO Play Animation
@@ -33,7 +35,7 @@ public class Grinder : MonoBehaviour {
         return temp;
     }
     IEnumerator ResetGrate() {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(2);
         grate.SetActive(true);
     }
 }

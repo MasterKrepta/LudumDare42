@@ -12,7 +12,10 @@ public class SceneChanger : MonoBehaviour {
     public static void ChangeLevel(int levelID) {
         SceneManager.LoadScene(levelID);
     }
-    
+
+    public void StartGame() {
+        SceneManager.LoadScene(1);
+    }
 
 
 }
