@@ -6,6 +6,7 @@ public class ScoreManager : MonoBehaviour {
 
     static float highScore;
     static float currentScore;
+    static float FinalScore;
     static TMP_Text txtScore;
 
     // Use this for initialization
@@ -23,5 +24,12 @@ public class ScoreManager : MonoBehaviour {
     static void  DisplayScore() {
         //Should I wait till end of game? And do I want a high score based on player prefs (Probobly not important for a jam game)
         txtScore.text = "Score: " + currentScore;
+    }
+    public static void UpdateFinalScore() {
+        FinalScore = currentScore;
+    }
+
+    public static float GetFinalScore() {
+        return FinalScore;
     }
 }

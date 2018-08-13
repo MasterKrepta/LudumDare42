@@ -60,9 +60,17 @@ public class Enemy : MonoBehaviour, IHasHealth {
         foreach (MonoBehaviour script in scripts) {
             script.enabled = false;
         }
+        CircleCollider2D attack = GetComponent<CircleCollider2D>();
+        attack.enabled = false;
     }
 
     public void Knockback() {
         //TODO Knockback
+    }
+
+    private void OnTriggerEnter2D(Collider2D other) {
+        if (other.CompareTag("Player")) {
+            other.GetComponent<IHasHealth>().TakeDamage(1);
+        }
     }
 }

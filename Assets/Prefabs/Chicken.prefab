@@ -55,6 +55,7 @@ GameObject:
   - component: {fileID: 61016487663970882}
   - component: {fileID: 114556256242234576}
   - component: {fileID: 212772948569099132}
+  - component: {fileID: 58277882424593046}
   m_Layer: 0
   m_Name: Chicken
   m_TagString: Enemy
@@ -186,7 +187,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1615618639109342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -10.476939, y: -3.1172419, z: -0.011445567}
+  m_LocalPosition: {x: 5.741584, y: -14.04266, z: -0.011445567}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4110767569062630}
@@ -213,6 +214,21 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!58 &58277882424593046
+CircleCollider2D:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1615618639109342}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.37, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.1
 --- !u!61 &61016487663970882
 BoxCollider2D:
   m_ObjectHideFlags: 1

@@ -34,6 +34,7 @@ public class Spawner : MonoBehaviour {
 
         if (canSpawn) {
             canSpawn = false;
+            enemiesAlive = 0;
             
             StartCoroutine("SpawnDelay");
         }

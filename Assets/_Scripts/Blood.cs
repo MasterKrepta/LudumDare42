@@ -11,7 +11,7 @@ public class Blood : MonoBehaviour {
         sr = GetComponent<SpriteRenderer>();
         int randSplat = Random.Range(0, splatters.Length);
         sr.sprite = splatters[randSplat];
-        Destroy(this.gameObject, 30);
+        Destroy(this.gameObject, 60);
     }
 	
 	// Update is called once per frame
