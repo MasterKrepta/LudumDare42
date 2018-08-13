@@ -256,7 +256,7 @@ MonoBehaviour:
   type: 2
   bloodEffect: {fileID: 1032960214863442, guid: 8989519c352a1344791da4bdfd3b20f4,
     type: 2}
-  maxHealth: 2
+  maxHealth: 6
   currentHealth: 0
   pointValue: 1
   moveSpeed: 1
