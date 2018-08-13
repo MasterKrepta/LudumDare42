@@ -14,7 +14,7 @@ public class Spawner : MonoBehaviour {
     Transform enemyToSpawn;
     static int enemiesAlive;
     static int wave = 1;
-    static bool canSpawn = true;
+    static public bool canSpawn = true;
 
     [SerializeField]static int enemiesToSpawn = 5;
 	// Use this for initialization
@@ -30,9 +30,8 @@ public class Spawner : MonoBehaviour {
     }
 
     private void Update() {
-    if (Input.GetMouseButtonDown(1)) {
-            Spawn(6);
-    }
+
+
         if (canSpawn) {
             canSpawn = false;
             

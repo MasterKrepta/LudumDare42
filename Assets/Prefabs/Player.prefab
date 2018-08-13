@@ -299,7 +299,8 @@ MonoBehaviour:
   art: {fileID: 1922100884038502}
   gun: {fileID: 1787988540027976}
   grinderTimer: {fileID: 0}
-  maxHealth: 10
+  spawner: {fileID: 0}
+  maxHealth: 5
   respawnTime: 3
 --- !u!114 &114151727186632558
 MonoBehaviour:

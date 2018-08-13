@@ -18,8 +18,10 @@ public class Grinder : MonoBehaviour {
         if(colliders != null) {
             foreach (Collider2D col in colliders) {
                 //Debug.Log(col.name);
-                float pointValue = col.GetComponent<Enemy>().pointValue;
-                ScoreManager.AddPoints(pointValue);
+                if(col.tag == "Enemy") {
+                    float pointValue = col.GetComponent<Enemy>().pointValue;
+                    ScoreManager.AddPoints(pointValue);
+                }
                 col.GetComponent<IHasHealth>().Die();
             }
         }

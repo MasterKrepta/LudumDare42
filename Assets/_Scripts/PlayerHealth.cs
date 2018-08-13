@@ -6,6 +6,7 @@ public class PlayerHealth : MonoBehaviour, IHasHealth {
 
     [SerializeField]GameObject art, gun;
     [SerializeField] GrinderTimer grinderTimer;
+    [SerializeField]Spawner spawner;
     float currentHealth;
     [SerializeField] float maxHealth = 10;
     [SerializeField] float respawnTime = 3;
@@ -65,6 +66,7 @@ public class PlayerHealth : MonoBehaviour, IHasHealth {
         art.SetActive(true);
         gun.SetActive(true);
         grinderTimer.ResetClock();
+        Spawner.canSpawn = true;
     }
 
     void DisableScripts() {
