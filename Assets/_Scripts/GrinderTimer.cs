@@ -5,7 +5,7 @@ using TMPro;
 
 public class GrinderTimer : MonoBehaviour {
     Grinder grinder;
-    
+    bool isRunning = true;
     [SerializeField] TMP_Text txtTimeRemaining;
 
     [SerializeField] float timeToDrop = 15;
@@ -18,19 +18,25 @@ public class GrinderTimer : MonoBehaviour {
 	}
 	
 	// Update is called once per frame
-	void FixedUpdate () {
-		if(secondsRemaining <= 0) {
-            //DROP;
-            txtTimeRemaining.text = "00:00";
-            grinder.ActivateGrinder();
-            //TODO: Place a small delay on the clock so it doenst auto roll over instantly. 
-            ResetClock();
+	void Update () {
+        if (isRunning) {
+            if (secondsRemaining <= 0) {
+                //DROP;
+                txtTimeRemaining.text = "00:00";
+                grinder.ActivateGrinder();
+                //TODO: Place a small delay on the clock so it doenst auto roll over instantly. 
+                ResetClock();
+            }
+            else {
+                secondsRemaining -= Time.deltaTime;
+            }
+            FormatTimer(secondsRemaining);
         }
         else {
-            secondsRemaining -= Time.deltaTime;
+            txtTimeRemaining.text = "00:00";
         }
-        FormatTimer(secondsRemaining);
-	}
+        
+    }
 
     void FormatTimer(float secondsRemaining) {
         string minutes = Mathf.Floor(secondsRemaining / 60).ToString("00");
@@ -44,10 +50,15 @@ public class GrinderTimer : MonoBehaviour {
         }
     }
 
-    void ResetClock() {
+    public void ResetClock() {
+        isRunning = true;
         txtTimeRemaining.GetComponent<Animator>().SetBool("Hurry", false);
         secondsRemaining = timeToDrop;
         FormatTimer(secondsRemaining);
+    }
+
+    public void StopClock() {
+        isRunning = false;
     }
 
     
