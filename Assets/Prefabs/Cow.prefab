@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4793238187666992}
   - component: {fileID: 212312486430988340}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cowBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4825060087645438}
   - component: {fileID: 212231365830177216}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cowBody
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -56,7 +56,7 @@ GameObject:
   - component: {fileID: 114556256242234576}
   - component: {fileID: 212947270434586894}
   - component: {fileID: 58845515349184632}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Cow
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -72,7 +72,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4349293172136894}
   - component: {fileID: 95750650605349484}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: CowArt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -88,7 +88,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4655530684901552}
   - component: {fileID: 212497709482893458}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: cowHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -131,7 +131,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1615618639109342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.811914, y: -17.20752, z: -0.011445567}
+  m_LocalPosition: {x: -8.956045, y: 2.7898264, z: -0.011445567}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4349293172136894}
@@ -196,9 +196,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.59, y: 0}
+  m_Offset: {x: 0.46, y: 0}
   serializedVersion: 2
-  m_Radius: 0.25
+  m_Radius: 0.06
 --- !u!61 &61016487663970882
 BoxCollider2D:
   m_ObjectHideFlags: 1

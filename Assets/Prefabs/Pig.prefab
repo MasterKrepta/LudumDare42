@@ -20,7 +20,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4027272956488576}
   - component: {fileID: 95090175266004036}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: ArtPig
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36,7 +36,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4569532691324618}
   - component: {fileID: 212981924402625438}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pigBack
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52,7 +52,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4809262142172734}
   - component: {fileID: 212529994106106638}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pigHead
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -68,7 +68,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4002951117340914}
   - component: {fileID: 212045765893238466}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: pigFront
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -89,7 +89,7 @@ GameObject:
   - component: {fileID: 212215591485732300}
   - component: {fileID: 95632958095379296}
   - component: {fileID: 58574371131166844}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Pig
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -145,7 +145,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1615618639109342}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.809353, y: -10.328285, z: -0.011445567}
+  m_LocalPosition: {x: -8.831498, y: 1.4571736, z: -0.011445567}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 4027272956488576}
@@ -197,9 +197,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.52, y: 0}
+  m_Offset: {x: 0.43, y: 0}
   serializedVersion: 2
-  m_Radius: 0.2
+  m_Radius: 0.07
 --- !u!61 &61016487663970882
 BoxCollider2D:
   m_ObjectHideFlags: 1
